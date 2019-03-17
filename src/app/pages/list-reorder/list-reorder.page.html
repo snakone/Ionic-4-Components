@@ -1,0 +1,19 @@
+<app-header title="List - Reorder"></app-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-reorder-group disabled="false"
+                       (ionItemReorder)="reOrder($event)">
+      <ion-item *ngFor="let char of characters">
+        <ion-label>{{char}}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+  <ion-button color="success"
+              expand="full"
+              (click)="save(characters)">
+    Guardar
+  </ion-button>
+</ion-content>

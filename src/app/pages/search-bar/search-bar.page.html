@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Search Bar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar animated
+                debounce="1000"
+                (ionChange)="search($event)">
+  </ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokedex | filter:value:'name'">
+      <ion-label>{{pokemon.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p> {{name}} - {{country}}</p>
+  <ion-button (click)="close()"
+              color="primary"
+              expand="full">
+            Cerrar
+  </ion-button>
+  <ion-button (click)="closeWithData()"
+              color="secondary"
+              expand="full">
+            Cerrar con Datos
+  </ion-button>
+</ion-content>
