@@ -9,19 +9,19 @@ export class CheckboxPage implements OnInit {
 
   data: Check[] = [
     {
-      name: 'primary',
+      color: 'primary',
       selected: false
     },
     {
-      name: 'secondary',
+      color: 'secondary',
       selected: true
     },
     {
-      name: 'tertiary',
+      color: 'tertiary',
       selected: false
     },
     {
-      name: 'success',
+      color: 'success',
       selected: true
     }
   ];
@@ -38,6 +38,6 @@ export class CheckboxPage implements OnInit {
 }
 
 interface Check {
-  name: string;
+  color: string;
   selected: boolean;
 }

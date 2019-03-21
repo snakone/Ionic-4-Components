@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsersDataService } from './services/users-data.service';
 import { Observable } from 'rxjs';
-import { IonList } from '@ionic/angular';
+import { IonList, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +13,8 @@ export class ListPage implements OnInit {
   users: Observable<any>;
   @ViewChild('list') list: IonList;
 
-  constructor(private data: UsersDataService) { }
+  constructor(private data: UsersDataService,
+              private toastController: ToastController) { }
 
   ngOnInit() {
     this.getUsers();
@@ -24,17 +25,25 @@ export class ListPage implements OnInit {
   }
 
   favorite(user) {
-    console.log('favorite', user);
+    this.presentToast('Guardó en favoritos');
     this.list.closeSlidingItems();
   }
 
   share(user) {
-    console.log('share', user);
+    this.presentToast('Compartido');
     this.list.closeSlidingItems();
   }
 
   delete(user) {
-    console.log('delete', user);
+    this.presentToast('Borrado');
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
   }
 
 }

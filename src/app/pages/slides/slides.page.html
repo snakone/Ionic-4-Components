@@ -1,0 +1,23 @@
+<ion-content padding>
+    <ion-slides pager="true" class="slide-full">
+      <ion-slide *ngFor="let slide of slides">
+        <ion-card mode=ios no-border>
+          <ion-img class="slide-image" [src]="slide.img"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{slide.titulo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{slide.desc}}
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-button expand="full"
+                    color="primary"
+                    fill="clear"
+                    (click)="onClick()">
+                  COMENZAR
+        </ion-button>
+      </ion-slide>
+    </ion-slides>
+</ion-content>

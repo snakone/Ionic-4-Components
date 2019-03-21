@@ -93,6 +93,21 @@ export const COMPONENTS: Components[] = [
     icon: 'search',
     name: 'Search Bar',
     url: '/search-bar'
+  },
+  {
+    icon: 'copy',
+    name: 'Segment',
+    url: '/segment'
+  },
+  {
+    icon: 'albums',
+    name: 'Slides',
+    url: '/slides'
+  },
+  {
+    icon: 'cog',
+    name: 'Tabs',
+    url: '/tabs'
   }
 ];
 

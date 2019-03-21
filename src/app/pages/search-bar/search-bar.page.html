@@ -9,8 +9,8 @@
 
 <ion-content padding>
   <ion-searchbar animated
-                debounce="1000"
-                (ionChange)="search($event)">
+                 debounce="1000"
+                 (ionChange)="search($event)">
   </ion-searchbar>
   <ion-list>
     <ion-item *ngFor="let pokemon of pokedex | filter:value:'name'">

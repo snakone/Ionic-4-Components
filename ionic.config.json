@@ -1,6 +1,8 @@
 {
-  "name": "Components",
-  "integrations": {},
+  "name": "Ionic 4 Components",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "5db7a286"
 }

@@ -5,10 +5,10 @@
     <ion-item *ngFor="let check of data"
               (click)="onClick(check)">
       <ion-label>
-        {{check.name}}
+        {{check.color}}
       </ion-label>
       <ion-checkbox [(ngModel)]="check.selected"
-                    [color]="check.name">
+                    [color]="check.color">
       </ion-checkbox>
     </ion-item>
   </ion-list>
